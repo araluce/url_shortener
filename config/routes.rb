@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   root "links#index"
 
   resources :links
+  resources :views, path: :v, only: :show
 end
