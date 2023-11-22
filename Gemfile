@@ -19,6 +19,8 @@ gem "chartkick", "~> 5.0"
 gem "groupdate", "~> 6.4"
 gem "sucker_punch", "~> 3.1"
 
+gem "devise", "~> 4.9"
+
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
 end
