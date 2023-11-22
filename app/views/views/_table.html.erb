@@ -6,16 +6,22 @@
           IP
         </th>
         <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-          City
+          Device
         </th>
         <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-          Region
+          Browser
         </th>
         <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-          Country
+          Browser Version
         </th>
         <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-          Location
+          Platform
+        </th>
+        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+          Platform Version
+        </th>
+        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+          At
         </th>
       </tr>
     </thead>
@@ -26,10 +32,12 @@
           <td class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
             <%= link_to view.ip, link_detail_path(@link, view) %>
           </td>
-          <td class="whitespace-nowrap px-4 py-2 text-gray-700"><%= view.city %></td>
-          <td class="whitespace-nowrap px-4 py-2 text-gray-700"><%= view.region %></td>
-          <td class="whitespace-nowrap px-4 py-2 text-gray-700"><%= view.country %></td>
-          <td class="whitespace-nowrap px-4 py-2 text-gray-700"><%= view.loc %></td>
+          <td class="whitespace-nowrap px-4 py-2 text-gray-700"><%= view.device %></td>
+          <td class="whitespace-nowrap px-4 py-2 text-gray-700"><%= view.browser %></td>
+          <td class="whitespace-nowrap px-4 py-2 text-gray-700"><%= view.browser_version %></td>
+          <td class="whitespace-nowrap px-4 py-2 text-gray-700"><%= view.platform %></td>
+          <td class="whitespace-nowrap px-4 py-2 text-gray-700"><%= view.platform_version %></td>
+          <td class="whitespace-nowrap px-4 py-2 text-gray-700"><%= view.created_at %></td>
         </tr>
       <% end %>
     </tbody>
