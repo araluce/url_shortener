@@ -36,3 +36,5 @@ group :test do
 end
 
 gem "browser", "~> 5.3"
+
+gem "geocoder", "~> 1.8"
