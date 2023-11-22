@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_11_22_202930) do
+ActiveRecord::Schema[7.1].define(version: 2023_11_22_205717) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -49,7 +49,11 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_22_202930) do
     t.string "browser_version"
     t.string "platform"
     t.string "platform_version"
-    t.json "ip_data", default: {}
+    t.string "city"
+    t.string "region"
+    t.string "country"
+    t.string "loc"
+    t.string "timezone"
     t.index ["link_id"], name: "index_views_on_link_id"
   end
 
