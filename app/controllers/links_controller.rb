@@ -45,10 +45,4 @@ class LinksController < ApplicationController
   def link_params
     params.require(:link).permit(:url)
   end
-
-  def check_if_editable
-    unless @link.editable_by?(current_user)
-      redirect_to @link, alert: "You aren't allowed to do that."
-    end
-  end
 end

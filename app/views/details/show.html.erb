@@ -1,0 +1,43 @@
+<div class="flex justify-between items-center text-sm">
+  <%= link_to "←  Back to all links", root_path, class: 'no-underline text-xs px-3 py-2 rounded bg-gray-100' %>
+  <%= link_to "←  Back", link_path(@link), class: 'no-underline text-xs px-3 py-2 rounded bg-gray-100' %>
+</div>
+<div class="overflow-x-auto">
+  <table class="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
+    <thead class="ltr:text-left rtl:text-right">
+      <tr>
+        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+          IP
+        </th>
+        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+          City
+        </th>
+        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+          Region
+        </th>
+        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+          Country
+        </th>
+        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+          Location
+        </th>
+        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+          At
+        </th>
+      </tr>
+    </thead>
+
+    <tbody class="divide-y divide-gray-200">
+        <tr class="odd:bg-gray-50">
+          <td class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+            <%= @view.ip %>
+          </td>
+          <td class="whitespace-nowrap px-4 py-2 text-gray-700"><%= @view.city %></td>
+          <td class="whitespace-nowrap px-4 py-2 text-gray-700"><%= @view.region %></td>
+          <td class="whitespace-nowrap px-4 py-2 text-gray-700"><%= @view.country %></td>
+          <td class="whitespace-nowrap px-4 py-2 text-gray-700"><%= @view.loc %></td>
+          <td class="whitespace-nowrap px-4 py-2 text-gray-700"><%= @view.created_at %></td>
+        </tr>
+    </tbody>
+  </table>
+</div>

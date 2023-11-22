@@ -18,6 +18,9 @@
 <% end %>
 
 <%= line_chart @link.views.group_by_day(:created_at, range: 2.weeks.ago..Time.now, expand_range: true).count %>
+
+<%= render(partial: "views/table", locals: { views: @link.views }) if @link.editable_by?(current_user) %>
+
 <%= pie_chart @link.views.group(:browser).count %>
 <%= pie_chart @link.views.group(:device).count %>
 <%= pie_chart @link.views.group(:platform).count %>

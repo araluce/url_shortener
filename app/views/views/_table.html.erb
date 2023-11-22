@@ -1,0 +1,37 @@
+<div class="overflow-x-auto">
+  <table class="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
+    <thead class="ltr:text-left rtl:text-right">
+      <tr>
+        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+          IP
+        </th>
+        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+          City
+        </th>
+        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+          Region
+        </th>
+        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+          Country
+        </th>
+        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+          Location
+        </th>
+      </tr>
+    </thead>
+
+    <tbody class="divide-y divide-gray-200">
+      <% views.each do |view| %>
+        <tr class="odd:bg-gray-50">
+          <td class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+            <%= link_to view.ip, link_detail_path(@link, view) %>
+          </td>
+          <td class="whitespace-nowrap px-4 py-2 text-gray-700"><%= view.city %></td>
+          <td class="whitespace-nowrap px-4 py-2 text-gray-700"><%= view.region %></td>
+          <td class="whitespace-nowrap px-4 py-2 text-gray-700"><%= view.country %></td>
+          <td class="whitespace-nowrap px-4 py-2 text-gray-700"><%= view.loc %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
