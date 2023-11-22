@@ -1,6 +1,6 @@
 require "open-uri"
 
-class Metadata
+class Metadata::Link
   attr_reader :doc
 
   def self.retrieve_from(url)
